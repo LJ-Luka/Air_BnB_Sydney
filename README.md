@@ -18,9 +18,9 @@ The analysis was done by querying the table in the above link. See questions tha
 
 **Airbnb Project Part 2: Scaling**
 
-I need to make data-driven decisions about my region, as the general manager for Airbnb Sydney. I have had a few encounters with hosts calling in, and anticipate many more calling in that will require the use of SQL in the future. Below are some scenarios.
+I need to make data-driven decisions about my region, as the general manager for Airbnb Sydney. I have had a few encounters with hosts calling in, and anticipate many more calling in that will require the use of SQL in the future.
 
-See cases and how they were handled here [Document](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_Sydney_Project), along with insights.
+See cases and how they were handled here [Document](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_Sydney_Project), along with findings and some recommendations.
 
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain-wordmark.svg" alt="mysql" width="40" height="40"/>
