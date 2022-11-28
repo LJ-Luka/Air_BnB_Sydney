@@ -1,8 +1,2 @@
-<h1 align= "center">Lumi Luka<h1>
-<ul>
-	<li> List Item A</li>
-	<li> List Item B</li>
-	<li> List Item C</li>
-	<li>List Item D</li>
-</ul>
+<h1 align= "center">Airbnb Project<h1>
 
