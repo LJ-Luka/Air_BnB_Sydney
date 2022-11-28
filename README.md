@@ -3,7 +3,7 @@
 <img src="./Airbnb_sydney_data_tables.png" alt="Airbnb_sydney_data_tables" width="550" height="550"/>
 
 **Airbnb Project Part 1: Launching Airbnb Sydney**
-<br>
+
 *Role: The general manager of Sydney area at Airbnb*
 
 This project exhibits familiarity with the foundations of SQL including filtering and sorting data from tables, rows,
