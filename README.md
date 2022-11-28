@@ -4,8 +4,10 @@
 
 **Airbnb Project Part 1: Launching Airbnb Sydney**
 
-Role: The general manager of Sydney area at Airbnb. In this role we will carry out some analysis to find out more about the properties onboarded by my team and answer certain questions as they arise.
-We already have cleaned data for our analysis process. We have some data available to help with the analysis. These include a Listings table, Neighborhoods table, Reviews table and Calendar table.
+Role: The general manager of Sydney area at Airbnb.
+
+In this role we will carry out some analysis to find out more about the properties onboarded by my team and answer certain questions as they arise.
+We already have cleaned data for our analysis process. We use the data available to help with the analysis. See data table here [Table](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_sydney_data_tables.png)
 
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain-wordmark.svg" alt="mysql" width="40" height="40"/>
