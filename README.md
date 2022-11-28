@@ -6,8 +6,10 @@
 
 Role: The general manager of Sydney area at Airbnb.
 
-In this role we will carry out some analysis to find out more about the properties onboarded by my team and answer certain questions as they arise.
+In this role we carry out some analysis to find out more about the properties onboarded by my team and answer certain questions as they arise.
 We already have cleaned data for our analysis process. We use the data available to help with the analysis. See data table here [Table](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_sydney_data_tables.png)
+
+The analysis was done by querying the table in the above link. See questions that arose and queries used to answer them here [Document](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_Sydney_Project)
 
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain-wordmark.svg" alt="mysql" width="40" height="40"/>
