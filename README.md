@@ -1,4 +1,4 @@
-<h1 color=red >Lumi Luka<h1>
+<h1 align= "center">Lumi Luka<h1>
 <ul>
 	<li> List Item A</li>
 	<li> List Item B</li>
