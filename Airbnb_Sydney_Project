@@ -6,7 +6,7 @@ Task 1: Our first task is to know more about the different listings of houses my
 The process is broken down into parts and each was carried out by querying the data;
 Part 1: We view each of the tables to have a clear picture of the data we are working with. The code below shows the query for the neighbourhoods table. Changing the FROM statement to reviews, calendar and listings show the results for each of those tables.
 
-```sqlite
+```sql
 --To view the neighbourhoods table
 SELECT
 *
