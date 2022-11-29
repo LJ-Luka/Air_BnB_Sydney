@@ -17,6 +17,8 @@ neighbourhoods
 Task 2: Printing list of host_id to host. 
 The current administrative system at our Airbnb Sydney office shows host_id when hosts call our helpdesk. Helpdesk operators do not have access to the full database and we do not yet have a system to offer partial access. We want to leave a good impression with callers (hosts) by knowing their names.
 An idea to solve this is to provide everyone access to a database printout of the host_id with the host name. We run a query and place the information in descending order to make it more useful.
+
+```sql
 --This shows the host_id and host columns pulled from the listings table in descending order
 
 SELECT
@@ -25,9 +27,12 @@ host
 FROM
 listings
 ORDER BY host_id DESC
+```
 
 Task 3: Additional filter on the printed output. 
 Asking employees to look at the long printout while on call is not a scalable solution. We want to assign one neighborhood to each employee so they have a smaller printout of listings to keep track of.
+
+```sql
 --Filtering by neighbourhood_id 35
 
 SELECT
@@ -38,8 +43,11 @@ listings
 WHERE
 neighbourhood_id = 35
 ORDER BY host_id DESC
+```
  
 Due to an ever-growing business and an employee growth of 120%, we want to split our list further to divide amongst the employees on call. We look at one neighbourhood and private room types in the neighbourhood.
+
+```sql
 --Filtered by neighbouthood_id 27 and room_type Private room
 
 SELECT
@@ -49,10 +57,13 @@ FROM
 listings
 WHERE
 neighbourhood_id = 27 AND room_type = 'Private room'
-ORDER BY host_id DESC    
+ORDER BY host_id DESC
+```
 
 We were able to successfully narrow down the lists for all employees on call to improve efficiency by 50% and improve customer relations.
 Task 4: A customer, Maggie, known by listing_id 7581165 calls. She wants to know whether changes to her pricing for weekends reflected. We retrieve all calendar listings between the dates 2022-09-09 and 2022-09-11. We filter further by her listing_id and discover no price changes. We get back to her with answers to help rectify this.
+
+```sql
 SELECT
 *
 FROM
@@ -60,9 +71,12 @@ calendar
 WHERE
 date BETWEEN '2022-09-09' AND '2022-09-11' AND 
 listing_id = 7581665
+```
 
 Task 5: Helping out Rick
 Rick wonders why customers aren’t booking his listings for the coming or past weeks. He wants us to promote his listing on our website more often, else he ceases being our customer. We query the calendar, reviews and listings tables and discover that his listings aren’t available on the calendar, he has received no reviews, and his listing price is a bit steep compared to others. This important information is relayed to Rick to help him make adjustments that match similar listings to boost his booking rate.
+
+```sql
 SELECT
 *
 FROM
@@ -83,12 +97,14 @@ FROM
 listings
 WHERE
 listing_id = 657377039990074158
-
+```
 
 Task 6: Beat the competition.
 A host calls regarding how to price her listings. She wants to set a price no less than $400. She feels she might be too expensive and is considering a competitor, VRBO.
 It is my job and desire to get her on Airbnb. We want to find listings greater than $400. She also wants to know about the ones nearest to her in neighbourhoods 20 that are also Entire home/apt. In addition to these, she wants to get some reviews to help with her decision.
 We find that there are other listings in her desired price range and close to her, with positive reviews.
+
+```sql
 /*The ORDER BY automatically sorts by ascending, unless DESC is  
 specified. The ASC statement is not needed here*/
 
@@ -121,13 +137,15 @@ reviews
 WHERE
 listing_id = 21443493 OR listing_id = 10729688 OR listing_id = 9012529 OR listing_id = 46159786 OR listing_id = 9376988
 ORDER BY listing_id
-
+```
 
 Task 7: Money Talks
 Analysis reveals a big difference, as much as 500x in prices per listing. This is to be expected since some areas are closer to points of interests and offer more luxury.
 More expensive areas can net us higher sales since our cut/fee is a percentage of the price of the listing. However, cheaper areas potentially are more likely to be booked.
 We are interested in those areas and want to analyse their availability and their potential differences.
 Let's first start with the cheapest neighbourhoods. The top three cheapest are neighbourhood ids 21, 28 and 4. We retrieve the listings from these neighbourhoods.
+
+```sql
 /*We query the listings table for all columns with neighbourhood
 ids 21, 28 and 4*/
 
@@ -137,8 +155,11 @@ FROM
 listings
 WHERE
 neighbourhood_id IN (21,28,4)
+```
 
 The prices of these four listings range between 40 to 80 dollars. We also want to get information regarding the most expensive neighbourhoods with ids 1, 26 and 37 and order by price. With the query below, we find that we have 9 listings with varying amount in prices.
+
+```sql
 SELECT
 *
 FROM
@@ -146,7 +167,11 @@ listings
 WHERE
 neighbourhood_id IN (1, 26,37)
 ORDER BY price_in_dollar 
+```
+
 We start comparing the calendar from the cheapest against the most expensive to find which is available the most. The cheapest are listing_id: 22296011, 8476652, 28268415, and 40426054. The most expensive are listing_id: 658279799851154919, 10549608, 41983356, 44284905, 2033151, 34027782, 46159786, 9376988, and 10111788.
+
+```sql
 --For cheapest
 SELECT
 *
@@ -161,6 +186,7 @@ FROM
 calendar
 WHERE
 listing_id IN (658279799851154919, 10549608, 41983356, 44284905, 2033151, 34027782, 46159786, 9376988, 10111788)
+```
 
 The results show that in the least expensive neighbourhoods we have 26 days registered, of which none are available for renting. Meaning for the coming week we have 0% availability in the cheap neighbourhoods. However, the most expensive neighbourhoods have 62 days registered of which for the coming week 4 days are available for renting. Meaning we have about 6% availability for next week.
 
@@ -172,6 +198,8 @@ I need to make data-driven decisions about my region, as the general manager for
 
 Task 1: Printing a list of hosts whose names start with the letter Jos
 Rosa, a support staff who works on your team at Airbnb Sydney is often the first person who people speak with when they call the Airbnb Sydney office. Rosa recently got a call from a host who had experienced some issues, which she was able to successfully resolve. It's now a week later, and she would like to follow-up with the host to see if they have encountered any additional problems. Unfortunately, Rosa didn't write down the host_id and only remembers that the host's name started with "Jos". Upset, Rosa asks if you can write a query that matches this description?
+
+```sql
 /*In the query we use the LIKE command to match names starting with JOS.
 The result of this query shows us the full name of the host after matching. It also shows all the columns from the listings table*/
 
@@ -181,8 +209,11 @@ FROM
   listings 
 WHERE
   host LIKE 'JOS%'
+```
 The result of the query above returns the full name of the host after matching along with listing, listing_id, host_id, room_type and price_in_dollar. 
 Before Rosa follows up with the host, she wants to make sure that she is prepared for the call. We query further to retrieve the neighbourhood name, the availability of the room on the calendar and if there are any reviews written for the room.
+
+```sql
 /*We have the information from the first query, so here we filter the neighbourhood name by the neighbourhood_id belonging to Joshua.
 We find out the name of the neighbourhood with neighbourhood_id 21 is Marrickville*/
 
@@ -213,9 +244,12 @@ FROM
   reviews 
 WHERE
   listing_id = 22296011
+```
    
 Task 2: Airbnb Melbourne called
 Airbnb Melbourne has been in operation longer than our office in Sydney. They called to gauge the prices that we have for our listings. They wanted to know the maximum, minimum, and average price for our listings to compare with what they're seeing in their region. We run a few queries to find out.
+
+```sql
 /*The lads in Melbourne trying to 'follow who know road' lol. We get them the average price of our listings*/
 
 SELECT
@@ -236,10 +270,13 @@ SELECT
   MIN(price_in_dollar)
 FROM 
   listings
+```
 
 Task 3: Monthly growth goals
 I've got headquarters on my back! They keep calling and asking whether we'll meet our monthly growth goals. We need to expand as quickly as possible all across Sydney. Some mentors tell me it's better to focus on places where we are already quite present. But I believe it'll serve us better to be spread out well across Sydney. I'm worried about overrepresentation in certain neighbourhoods, which might anger local officials and even put our jobs at risk.
 First, let's see if we can get an overview of which neighbourhoods have the most listings. We sort the query in descending order.
+
+```sql
 /*We query the listings table for the neighbourhood_id as well as COUNT to display the number of listings in each.
 We find a few well represented as well as under-represented neighbourhoods. 
 We also see 20 neighbourhoods (0-19). The result is grouped by neighbourhood_id in no particular order*/
@@ -251,7 +288,10 @@ FROM
   listings
 GROUP BY neighbourhood_id
 ORDER BY COUNT(neighbourhood_id) DESC
+```
 The result shows that we have 20 neighbourhoods in the listings table but quiet a few with really few listings. We want to find out whether or not there are neighbourhoods with no Airbnb listings.
+
+```sql
 /*In our intial queries we used GROUP by neighbourhood_id, but here we want to see all neighbourhood ids.
 This query brings up about 38 neighbourhoods*/
 
@@ -259,6 +299,7 @@ SELECT
   neighbourhood_id
 FROM
   neighbourhoods
+```
 Here, we see about 38 neighbourhoods in the neighbourhoods table compared to the 20 in listings. Our analysis shows that some neighbourhoods have few listings or none at all. These might offer interesting new opportunities to explore.
 
 Task 4: Creating a new (simplified) column
@@ -267,6 +308,7 @@ We have recruited hosts and have some listings. We want to improve the experienc
 •	Mid-range (70 - 300 dollar per night)
 •	Expensive (300+ dollar per night)
 
+```sql
 /*We use the CASE statement to create three conditions based on price of listings.
 We want to display the columns listed in the notes above, then create the conditions and display them in an aliased column.
 We use the proper syntax to display the desired results.
@@ -284,9 +326,12 @@ SELECT
   END AS price_range
 FROM
   listings
+```
 
 Task 5: Represented or not
 We're now interested in tracking all neighbourhoods in which we are over-represented. Let's first count all occurrences of each neighbourhood in our listings-table.
+
+```sql
 /*To track neighbourhoods in which we are over-represented, we use the COUNT statement. 
 We see each occurrence and neighbourhood_id 35 has 13*/
 
@@ -296,8 +341,10 @@ SELECT
 FROM
   listings
 GROUP BY neighbourhood_id
-
+```
 Let's limit the results to only neighbourhoods that have a count higher than 4.
+
+```sql
 /*Here, we want to display only neighbourhoods with count highere than 4. In addition to our initial COUNT statement, we need something extra.
 Remember, where does not work with aggregated date, which COUNT here is, thus we use HAVING to display the count of neighbourhood ids > 4*/
 
@@ -308,7 +355,7 @@ FROM
   listings
 GROUP BY neighbourhood_id
 HAVING COUNT(neighbourhood_id) > 4
-
+```
 
 
 
