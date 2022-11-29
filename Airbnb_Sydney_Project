@@ -6,13 +6,13 @@ Task 1: Our first task is to know more about the different listings of houses my
 The process is broken down into parts and each was carried out by querying the data;
 Part 1: We view each of the tables to have a clear picture of the data we are working with. The code below shows the query for the neighbourhoods table. Changing the FROM statement to reviews, calendar and listings show the results for each of those tables.
 
-'''Mysql
+```{Mysql}
 --To view the neighbourhoods table
 SELECT
 *
 FROM
 neighbourhoods
-'''
+```
 
 Task 2: Printing list of host_id to host. 
 The current administrative system at our Airbnb Sydney office shows host_id when hosts call our helpdesk. Helpdesk operators do not have access to the full database and we do not yet have a system to offer partial access. We want to leave a good impression with callers (hosts) by knowing their names.
