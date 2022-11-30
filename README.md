@@ -8,8 +8,8 @@ This project exhibits familiarity with the foundations of SQL including filterin
 schema and other data types, aggregations, complex filtering logic and built-in data/strong predicates,
 and implementing the GROUP BY and HAVING clause.
 
-In this role we carried out some analysis to find out more about the properties onboarded by my team and answer certain questions as they arise.
-We already had cleaned data for our analysis process. We used the data available to help with the analysis. See data table here [Table](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_sydney_data_tables.png)
+In this role we carried out some analyses to find out more about the properties onboarded by my team and answered certain questions as they arose.
+We already had cleaned data for our analysis process. We used the data available to help with the analyses. See data table here [Table](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_sydney_data_tables.png)
 
 The analysis was done by querying the table in the above link. See questions that arose (through scenarios) and queries used to answer them here [Document](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_Sydney_Project)
 
