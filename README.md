@@ -4,8 +4,6 @@
 <br/>
 ***Role: The general manager of Sydney area at Airbnb***
 
-This live project was part of a sql course conducted by Sourabh Bajaj and his team at CoRise.
-
 The project exhibits familiarity with the foundations of SQL including filtering and sorting data from tables, rows,
 schema and other data types, aggregations, complex filtering logic and built-in data/strong predicates,
 and implementing the GROUP BY and HAVING clause.
@@ -21,6 +19,9 @@ The analysis was done by querying the table in the above link. See questions tha
 I need to make data-driven decisions about my region, as the general manager for Airbnb Sydney. I have had a few encounters with hosts calling in, and anticipate many more calling in that will require the use of SQL in the future.
 
 See cases and how they were handled here [Document](https://github.com/LJ-Luka/LJ-Luka.github.io/blob/main/Airbnb_Sydney_Project), along with findings and some recommendations.
+
+
+This live project was part of a sql course conducted by Sourabh Bajaj and his team at CoRise.
 
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain-wordmark.svg" alt="mysql" width="40" height="40"/>
