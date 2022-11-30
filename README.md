@@ -4,7 +4,8 @@
 <br/>
 ***Role: The general manager of Sydney area at Airbnb***
 
-This live project was part of a sql course conducted by CoRise
+This live project was part of a sql course conducted by CoRise.
+
 The project exhibits familiarity with the foundations of SQL including filtering and sorting data from tables, rows,
 schema and other data types, aggregations, complex filtering logic and built-in data/strong predicates,
 and implementing the GROUP BY and HAVING clause.
