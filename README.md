@@ -1,7 +1,7 @@
 <h1> Airbnb Project</h1>
 
 **Airbnb Project Part 1: Launching Airbnb Sydney**
-
+<br/>
 ***Role: The general manager of Sydney area at Airbnb***
 
 This project exhibits familiarity with the foundations of SQL including filtering and sorting data from tables, rows,
